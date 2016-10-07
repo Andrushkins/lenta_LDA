@@ -1,0 +1,25 @@
+<div class="slider" id="slider" width="100%" height="250px" style="max-width: 970; overflow: hidden; position: relative;">
+  <a href="%reference%" target="%target%">
+    <img src="https://raw.githubusercontent.com/Andrushkins/images/master/lenta_LDA/LDA_lenta_250x970_1.jpg" id="img">
+  </a>
+</div>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', animation)
+    function animation() {
+      var imageCount = 0;
+      var total = [0, 1, 2];
+      var Image = document.getElementById('img');
+
+      (function slide() {
+        imageCount = imageCount + 1;
+        var time = 2500;
+        if (imageCount > total.length) {
+          imageCount = 1;
+        }
+        Image.src = "https://raw.githubusercontent.com/Andrushkins/images/master/lenta_LDA/LDA_lenta_250x970_" + imageCount + ".jpg";
+        setTimeout(function() {
+          slide();
+        },time);
+      }());
+    }
+</script>
